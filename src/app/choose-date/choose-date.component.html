@@ -1,0 +1,16 @@
+<div class="container">
+   
+    <div class="book"><label>Book an Appointment</label></div>
+    
+    <div class="date">
+        <label>Select Date and Time: </label>
+        <input name="date" type="date" [min]="todayDate" [(ngModel)]="date" (ngModelChange)="onChangeDate($event)">
+    </div>
+
+    <div class="grid-container">
+        
+        <div *ngFor="let time of timings; let i = index" class="grid-item" (click)="onSelectTime(i)"
+            [ngClass]="{'disabled': !dateService.validDate}">{{time}}</div>
+    </div>
+
+</div>

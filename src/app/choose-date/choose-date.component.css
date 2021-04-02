@@ -1,0 +1,58 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+    padding: 10px;
+    position: relative;
+    top: 200px;
+    
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .grid-item:hover {
+      background-color: lightblue;
+  }
+
+  .container {
+      background-image: url('../../assets/doctor.jpg');
+      height: 100vh;
+      background-repeat: no-repeat;
+      font-size: 25px;
+      background-size:cover
+  }
+
+  .date {
+      position: absolute;
+      top:15%;
+      left: 37%;
+      
+      font-weight: bolder;
+  }
+
+  input[type=date] {
+      height: 40px;
+      width: 300px;
+      border-radius: 10px;
+  }
+
+  .disabled {
+      background-color:darkgray;
+      cursor: initial;
+  }
+
+  .book {
+      text-align: center;
+      font-weight: bolder;
+      font-size: 36px;
+  }
+
+
+
+  
