@@ -1,3 +1,5 @@
+<!-- <div [ngClass]="{'loader': loader}" > </div> -->
+<ngx-spinner></ngx-spinner>
 <div class="container">
    
     <div class="book"><label>Book an Appointment</label></div>
@@ -10,7 +12,7 @@
     <div class="grid-container">
         
         <div *ngFor="let time of timings; let i = index" class="grid-item" (click)="onSelectTime(i)"
-            [ngClass]="{'disabled': !dateService.validDate}">{{time}}</div>
+            [ngClass]="{'disabled': !dateService.validDate, 'booked': checkBooked(time)}">{{time}}</div>
     </div>
 
 </div>

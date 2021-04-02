@@ -3,15 +3,16 @@ export class User {
     lastName: string;
     contact: number;
     date: string;
-    slot: string;
+    time: string;
+    _id?: string;
 
     constructor(firstName: string,lastName: string, contact: number,
-        date: string, slot: string ) {
+        date: string, time: string ) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.contact = contact;
             this.date = date;
-            this.slot = slot;
+            this.time = time;
             
 
     }

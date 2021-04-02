@@ -1,3 +1,4 @@
+<ngx-spinner></ngx-spinner>
 <div class="container">
     <div class="user-container" [formGroup]="userForm">
         <h2>Enter all Details</h2>
@@ -14,8 +15,8 @@
             <label for="contactNumber">Contact Number* :</label>
             <input type="number" name="contactNumber" formControlName="contact">
 
-            <button>Save</button>
-             <button>Cancel</button>
+            <button (click)="saveAppointment()" [disabled]="!userForm.valid">{{_id?'Update':'Save'}}</button>
+             <button (click)="returnAppointment()">Cancel</button>
 
 
         </div>
