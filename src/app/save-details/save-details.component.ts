@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DateService } from '../date-service.service';
 import { User } from '../model/user.model';
@@ -11,9 +12,11 @@ import { User } from '../model/user.model';
 export class SaveDetailsComponent implements OnInit {
   user:User;
   timeSlot: string;
+  userForm:  FormGroup;
+
   constructor(private dateService: DateService, private route: ActivatedRoute,
     
-    private router: Router) { }
+    private router: Router, private fb: FormBuilder) { }
 
   ngOnInit(): void {
     if (!this.dateService.validDate) {
@@ -23,6 +26,12 @@ export class SaveDetailsComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.timeSlot = params.get('id');
       
+    })
+
+    this.userForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      contact: ['', Validators.required]
     })
 
 

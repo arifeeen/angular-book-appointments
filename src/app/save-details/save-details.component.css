@@ -1,0 +1,52 @@
+.container {
+    background-image: url('../../assets/doctor.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    font-size: 25px;
+    background-size:cover;
+    position: relative;
+}
+
+.user-container{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    width: 600px;
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.field-align {
+    display: grid;
+    grid-template-columns: 250px auto;
+    position: relative;
+    
+}
+
+.field-align > label{
+    text-align: right;
+    padding:10px;
+    margin:10px;
+}
+
+.field-align > input {
+    border-radius: 10px;
+    text-align: left;
+    padding:10px;
+    margin:10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.field-align >  button{
+    margin-left: 50%;
+    margin-right: 50%;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+}
+
